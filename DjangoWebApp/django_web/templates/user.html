@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <h1>I am at User Page</h1>
+    <link rel="stylesheet" href={% static "css/mystyle.css" %}/>
+</head>
+<body>
+    <div class="djangtwo">
+        <h2>User Records</h2>
+        {% if people_records %}
+
+            <ol>
+                {% for pp in people_records %}
+                <li>User Record</li>
+                <ul>
+                    <li> {{ pp.First_Name }} </li>
+                    <li> {{ pp.Last_Name }} </li>
+                    <li> {{ pp.Email }} </li>
+                </ul>
+                {% endfor %}
+            </ol>
+
+
+
+        {% else %}
+        <p> NO ACCESS RECORDS FOUND </p>
+        {% endif %}
+
+</body>
+</html>

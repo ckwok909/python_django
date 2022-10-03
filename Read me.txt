@@ -1,0 +1,7 @@
+Activate venv - C:\Users\Jason\PycharmProjects\Django Example\DjangoWebApp\Scripts\activate
+Activate server - 	cd C:\Users\Jason\PycharmProjects\DjangoWebApp\django_web
+		-	python manage.py runserver
+URL - http://127.0.0.1:8000/
+Migrate Database - python manage.py migrate
+Create Database - python manage.py makemigrations first_django_web
+Create user account Database - python manage.py createsuperuser U: Jason P: Robot1314*

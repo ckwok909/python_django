@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "basic_app/basic_app_base.html" %}
+{% block body_block %}
+<div class="jumbotron">
+    <h1> Welcome to a list of all the school</h1>
+        <ol>
+            {% for school in schools %}
+            <h2>
+                <li>
+                    <a href="{{ school.id }}">{{ school.name }}</a>
+                    <a class='btn btn-warning' href="{% url 'basic_app:delete' pk=school.id %}">Delete</a>
+                    <ul>
+                        <h3>
+                            <li>{{ school.principal }}</li>
+                            <li>{{ school.location }}</li>
+                        </h3>
+                    </ul>
+                </li>
+            </h2>
+            {% endfor %}
+        </ol>
+</div>
+{% endblock %}
